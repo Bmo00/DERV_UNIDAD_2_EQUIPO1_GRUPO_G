@@ -11,6 +11,7 @@ public class SingletonUsuario : MonoBehaviour
     public int ataque = 20;
 
 
+
     private void Awake()
     {
         if (instancia == null)
