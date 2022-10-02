@@ -7,8 +7,8 @@ public class SingletonUsuario : MonoBehaviour
 
 
     public static SingletonUsuario instancia;
-    public int vida = 70;
-    public int ataque = 20;
+    public int vida = 100;
+    public int ataque = 50;
 
 
 
