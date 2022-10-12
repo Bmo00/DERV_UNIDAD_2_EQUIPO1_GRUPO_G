@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fin.unity
     guid: a54482168c9031e40977a7f7c1d3bc6b
+  - enabled: 1
+    path: Assets/Scenes/Scenes Mini Juego 1/Inicio 1.unity
+    guid: afa69966e6606054693be0b5c258690c
+  - enabled: 1
+    path: Assets/Scenes/Scenes Mini Juego 1/Fin 1.unity
+    guid: 52347eb90f4a543458a28bbec380e520
+  - enabled: 1
+    path: Assets/Scenes/Scenes Mini Juego 1/Ejercicio 7.unity
+    guid: fdfe0c1510cdcb14b8cff700301f199f
   m_configObjects: {}
