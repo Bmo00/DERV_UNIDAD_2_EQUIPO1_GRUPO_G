@@ -835,7 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rnd_ubi_manzana: 0
   spawners: []
-  obj_manzana: {fileID: 9144599631638495517, guid: f27e5e1955191f640b2a3403e60e2397, type: 3}
+  obj_manzana: {fileID: 4262815251553282391, guid: 75db7ce72fda64e438648c62b0e94f5b, type: 3}
 --- !u!4 &452315999
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Manager_Spawners : MonoBehaviour
@@ -15,7 +16,7 @@ public class Manager_Spawners : MonoBehaviour
     GameObject obj_manzana;
 
     int tot_spawners = 1;
-    
+    GameObject objTemp;
     public void Awake()
     {
         
@@ -37,7 +38,7 @@ public class Manager_Spawners : MonoBehaviour
 
         Transform aux = spawners[rnd_ubi_manzana];
 
-        GameObject objTemp = Instantiate(obj_manzana, aux.position, aux.rotation);
+        objTemp = Instantiate(obj_manzana, aux.position, aux.rotation);
         objTemp.name = "manzana";
     }
     
@@ -48,6 +49,9 @@ public class Manager_Spawners : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (objTemp.IsDestroyed())
+        {
+            createManzana();
+        }
     }
 }

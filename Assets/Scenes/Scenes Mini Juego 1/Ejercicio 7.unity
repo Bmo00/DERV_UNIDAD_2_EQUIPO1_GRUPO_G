@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c505e2d1ca09d3c43aab0e6f2889504c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt_usuario: {fileID: 0}
 --- !u!4 &234991078
 Transform:
   m_ObjectHideFlags: 0
@@ -879,7 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rnd_ubi_manzana: 0
   spawners: []
-  obj_manzana: {fileID: 9144599631638495517, guid: f27e5e1955191f640b2a3403e60e2397, type: 3}
+  obj_manzana: {fileID: 4262815251553282391, guid: 75db7ce72fda64e438648c62b0e94f5b, type: 3}
 --- !u!4 &452315999
 Transform:
   m_ObjectHideFlags: 0
