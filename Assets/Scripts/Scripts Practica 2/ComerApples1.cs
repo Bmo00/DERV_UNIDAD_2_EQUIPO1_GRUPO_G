@@ -11,10 +11,8 @@ public class ComerApples1 : MonoBehaviour
 {
     Manager_Spawners1 spawn = new Manager_Spawners1();
 
-    [SerializeField]
-    TextMeshProUGUI t_tiempo;
 
-    int tiempoInicio;
+    int VidaIni;
 
     [SerializeField]
     public TextMeshProUGUI txt_Vida;
@@ -24,25 +22,15 @@ public class ComerApples1 : MonoBehaviour
 
     private void Awake()
     {
-        GameObject obj = GameObject.Find("txt_Tiempo");
-        t_tiempo = obj.GetComponent<TextMeshProUGUI>();
+        GameObject obj = GameObject.Find("txt_Vida");
+        txt_Vida = obj.GetComponent<TextMeshProUGUI>();
     }
     void Start()
     {
-        tiempoInicio = 10;
+        VidaIni = 10;
         StopAllCoroutines();
         StartCoroutine("controlTiempo");
-        InvokeRepeating("disminuir", 1f, 1f);
-        v = SingletonUsuario.instancia.vida;
-
-        txt_Vida.text = v.ToString();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-
+        txt_Vida.text = VidaIni.ToString();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,40 +44,22 @@ public class ComerApples1 : MonoBehaviour
         if (!tag.Equals("Escenario"))
         {
             GameObject obj = GameObject.Find(name);
-
             Destroy(obj);
-
-            masvida(v);
-
-            v = v+5;
-            txt_Vida.text = v.ToString();
+            VidaIni = VidaIni + 5;
+            txt_Vida.text = VidaIni.ToString();
         }
     }
 
-    void masvida(int vida)
-    {
-        vida += 5;
-        tiempoInicio = tiempoInicio + 5;
-    }
 
     IEnumerator controlTiempo()
     {
-        while (tiempoInicio >= 0)
+        while (VidaIni >= 0)
         {
-            t_tiempo.text = tiempoInicio.ToString();
-            tiempoInicio--;
+            txt_Vida.text = VidaIni.ToString();
+            VidaIni--;
             yield return new WaitForSeconds(1f);
-
-
         }
     }
 
-    void disminuir()
-    {
-        if (v > 0)
-        {
-            v--;
-            txt_Vida.text= v.ToString();
-        }
-    }
+
 }
